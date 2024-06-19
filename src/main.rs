@@ -51,9 +51,9 @@ fn main() {
     }
 
     println!("       ||                   ||       ");
-    println!("      |||                   |||      ");
-    println!("====|||||-------------------||||=====");
-    println!("      |||                   |||      ");
+    println!("     | ||                   || |      ");
+    println!("====||+||=-----------------=||+||=====");
+    println!("     | ||                   || |      ");
     println!("       ||                   ||       ");
 
     for mut plate in plate_stack {

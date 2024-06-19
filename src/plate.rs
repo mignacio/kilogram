@@ -17,6 +17,16 @@ impl PlateColor{
             PlateColor::White=>return "White".to_string()
         }
     }
+
+    pub fn to_ansi_code(&self) -> String{
+        match self{
+            PlateColor::Red=>return "1".to_string(),
+            PlateColor::Blue=>return "4".to_string(),
+            PlateColor::Yellow=>return "3".to_string(),
+            PlateColor::Green=>return "2".to_string(),
+            PlateColor::White=>return "7".to_string()
+        }
+    }
 }
 
 pub struct Plate{
@@ -36,7 +46,7 @@ impl Plate{
     }
 
     pub fn to_string(&self) -> String{
-        return format!("{} {}kg\t{}", self.quantity, self.weight, self.color.to_string());
+        return format!("\x1b[4{}m\x1b[30m{} {}kg\t{}\x1b[0m", self.color.to_ansi_code(), self.quantity, self.weight, self.color.to_string());
     }
 
     pub fn get_weight(&self) -> f32{
