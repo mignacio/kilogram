@@ -32,21 +32,31 @@ impl PlateColor{
 pub struct Plate{
     weight: f32,
     color: PlateColor,
-    pub quantity: i32
+    pub quantity: i32,
+    is_big: bool
 
 }
 
 impl Plate{
-    pub fn new(weight: f32, color: PlateColor, quantity: i32) -> Self{
+    pub fn new(weight: f32, color: PlateColor, quantity: i32, is_big: bool) -> Self{
         Self{
             weight,
             color,
-            quantity
+            quantity,
+            is_big
+        }
+    }
+
+    pub fn to_ascii_graphics(&self) -> String{
+        if self.is_big {
+            return format!("  \x1b[10{}m\x1b[3{}m=======\x1b[0m  ", self.color.to_ansi_code(), self.color.to_ansi_code());
+        } else {
+            return format!("    \x1b[10{}m\x1b[3{}m---\x1b[0m    ", self.color.to_ansi_code(), self.color.to_ansi_code());
         }
     }
 
     pub fn to_string(&self) -> String{
-        return format!("\x1b[4{}m\x1b[30m{} {}kg\t{}\x1b[0m", self.color.to_ansi_code(), self.quantity, self.weight, self.color.to_string());
+        return format!("\x1b[10{}m\x1b[30m{} {}kg\t{}\x1b[0m", self.color.to_ansi_code(), self.quantity, self.weight, self.color.to_string());
     }
 
     pub fn get_weight(&self) -> f32{
