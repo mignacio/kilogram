@@ -39,7 +39,7 @@ fn main() {
     };
     
     if !(total_weight >= (bar_weight + 5.0)) {
-        println!("Weight must be greater or equal than the weight of the bar with collars ({})kg).", bar_weight + 6.0);
+        println!("Weight must be greater or equal than the weight of the bar with collars ({})kg).", bar_weight + 5.0);
         return
     }
 
