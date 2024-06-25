@@ -1,6 +1,7 @@
 use std::env;
 
 mod plate;
+mod bar;
 
 use crate::plate::*;
 
@@ -17,13 +18,25 @@ fn main() {
         Plate::new(1.0, PlateColor::Green,   0, AsciiPlate::Plate6),
         Plate::new(0.5, PlateColor::White,   0, AsciiPlate::Plate6)
     ];
-    let bar_weight: f32 = 20.0;
 
     let args: Vec<String> = env::args().collect();
     let mut total_weight: f32;
+    let bar_weight: f32;
 
     match args.len() {
         2 => {
+            match args[1].parse::<f32>(){
+                Ok(n) => {
+                    total_weight = n;
+                    bar_weight = 20.0; //assume bar is 20kg
+                },
+                Err(_e) =>{
+                    println!("Weight must be a valid number \n\te:({}).", _e);
+                    return
+                },
+            }
+        },
+        3 => {
             match args[1].parse::<f32>(){
                 Ok(n) => total_weight = n,
                 Err(_e) =>{
@@ -31,13 +44,23 @@ fn main() {
                     return
                 },
             }
-        },
+            match args[2].parse::<char>(){
+                Ok('m') => bar_weight = 20.0,
+                Ok('w') => bar_weight = 15.0,
+                _ => {
+                    println!("Bar must be a 'm' or 'w' character.");
+                    return
+                },
+            }
+        }
         _ => {
             println!("Usage: pass a weight as argument to know which plates to load on a weighlifting bar.");
+            println!("- Example 1: weightlifting-calculator 145 w (shows how to load a women's 15kg bar with a total of 145kg).");
+            println!("- Example 2: weightlifting-calculator 132 m (shows how to load a men's 20kg bar with a total of 132kg)");
             return
         },
     };
-    
+
     if !(total_weight >= (bar_weight + 5.0)) {
         println!("Weight must be greater or equal than the weight of the bar with collars ({})kg).", bar_weight + 5.0);
         return
