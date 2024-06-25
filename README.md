@@ -29,5 +29,7 @@ TODO:
 
   - Unit testing (so I can learn how unit testing works on Rust).
 
+  - Github actions for release and testing.
+
 
 (Made with Rust because I wanted to learn)

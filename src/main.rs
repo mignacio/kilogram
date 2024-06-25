@@ -72,7 +72,30 @@ fn main() {
         "                  ",
     ];
 
+    const COLLAR: &[&str; 7] = &[
+        " ",
+        " ",
+        " ",
+        "Ò",
+        " ",
+        " ",
+        " ",
+    ];
+
+    const BAR_END: &[&str; 7] = &[
+        " ",
+        " ",
+        " ",
+        "=",
+        " ",
+        " ",
+        " ",
+    ];
+
     for n in 0..7{
+        print!("{}", BAR_END[n]);
+        print!("{}", BAR_END[n]);
+        print!("{}", COLLAR[n]);
         for ascii_plate in ascii_plates.iter().rev(){
             print!("\x1b[9{}m{}\x1b[0m", ascii_plate.get_color().to_ansi_code(), ascii_plate.get_ascii_art().to_ascii_arr()[n]);
         }
@@ -82,6 +105,10 @@ fn main() {
         for ascii_plate in ascii_plates.iter(){
             print!("\x1b[9{}m{}\x1b[0m", ascii_plate.get_color().to_ansi_code(), ascii_plate.get_ascii_art().to_ascii_arr()[n]);
         }
+
+        print!("{}", COLLAR[n]);
+        print!("{}", BAR_END[n]);
+        print!("{}", BAR_END[n]);
         println!();
     }
 } 
