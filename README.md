@@ -7,23 +7,25 @@ Given a weight in kilograms it will show you how to properly load the plates on 
 Example: 
 
 ```
-./weighlifting-calculator 143
-   |¦||¦|                  |¦||¦|
- |||¦||¦|                  |¦||¦|||
-||||¦||¦|                  |¦||¦||||
-||||¦||¦|=————————————————=|¦||¦||||
-||||¦||¦|                  |¦||¦||||
- |||¦||¦|                  |¦||¦|||
-   |¦||¦|                  |¦||¦|
+./weighlifting-calculator 143 m
+      |¦||¦|                  |¦||¦|
+    |||¦||¦|                  |¦||¦|||
+   ||||¦||¦|                  |¦||¦||||
+==Ò||||¦||¦|=————————————————=|¦||¦||||Ò==
+   ||||¦||¦|                  |¦||¦||||
+    |||¦||¦|                  |¦||¦|||
+      |¦||¦|                  |¦||¦|
 ```
 (The actual drawing is colorized)
 
 TODO:
-  - Improve the help or usage message with examples.
+~ - Improve the help or usage message with examples. ~
 
-  - Option to use different bars (the program asumes the 20kg bar for male competitions).
+ ~ - Option to use different bars (the program asumes the 20kg bar for male competitions). ~
 
-  - Add ASCII art drawings of the collars (now collars are loaded but not displayed in the drawing).
+ ~ - Add ASCII art drawings of the collars (now collars are loaded but not displayed in the drawing). ~
+
+   - Add color indicators for the bars.
 
   - Option to add o remove collars (the program asumes the bar will always have a 2.5kg collar loaded on either side).
 

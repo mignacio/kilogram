@@ -1,7 +1,6 @@
 use std::env;
 
 mod plate;
-mod bar;
 
 use crate::plate::*;
 
@@ -95,6 +94,16 @@ fn main() {
         "                  ",
     ];
 
+    const BAR_END: &[&str; 7] = &[
+        " ",
+        " ",
+        " ",
+        "=",
+        " ",
+        " ",
+        " ",
+    ];
+
     const COLLAR: &[&str; 7] = &[
         " ",
         " ",
@@ -105,15 +114,7 @@ fn main() {
         " ",
     ];
 
-    const BAR_END: &[&str; 7] = &[
-        " ",
-        " ",
-        " ",
-        "=",
-        " ",
-        " ",
-        " ",
-    ];
+
 
     for n in 0..7{
         print!("{}", BAR_END[n]);
