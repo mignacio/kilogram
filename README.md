@@ -1,11 +1,11 @@
 
 ```
- ██╗  ██╗██╗██╗      ██████╗  ██████╗ ██████╗  █████╗ ███╗   ███╗
- ██║ ██╔╝██║██║     ██╔═══██╗██╔════╝ ██╔══██╗██╔══██╗████╗ ████║
- █████╔╝ ██║██║     ██║   ██║██║  ███╗██████╔╝███████║██╔████╔██║
- ██╔═██╗ ██║██║     ██║   ██║██║   ██║██╔══██╗██╔══██║██║╚██╔╝██║
- ██║  ██╗██║███████╗╚██████╔╝╚██████╔╝██║  ██║██║  ██║██║ ╚═╝ ██║
- ╚═╝  ╚═╝╚═╝╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝
+     ██╗  ██╗██╗██╗      ██████╗  ██████╗ ██████╗  █████╗ ███╗   ███╗
+     ██║ ██╔╝██║██║     ██╔═══██╗██╔════╝ ██╔══██╗██╔══██╗████╗ ████║
+     █████╔╝ ██║██║     ██║   ██║██║  ███╗██████╔╝███████║██╔████╔██║
+     ██╔═██╗ ██║██║     ██║   ██║██║   ██║██╔══██╗██╔══██║██║╚██╔╝██║
+     ██║  ██╗██║███████╗╚██████╔╝╚██████╔╝██║  ██║██║  ██║██║ ╚═╝ ██║
+     ╚═╝  ╚═╝╚═╝╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝
 ```                                                             
 
 If you're lazy or suck at doing math in your head. This is a tool for you.
@@ -16,6 +16,7 @@ Example:
 
 ```
 ./kilogram 143 m
+
       |¦||¦|                  |¦||¦|
     |||¦||¦|                  |¦||¦|||
    ||||¦||¦|                  |¦||¦||||
@@ -26,21 +27,15 @@ Example:
 ```
 (The actual drawing is colorized)
 
-TODO:
 
-  - Add color indicators for the bars.
-
-  - Option to add o remove collars (the program asumes the bar will always have a 2.5kg collar loaded on either side).
-
-  - Unit testing (so I can learn how unit testing works on Rust).
-
+## TODO:
   - Github actions for release and testing.
+  - Add color indicators for the bars.
+  - Option to add o remove collars (the program asumes the bar will always have a 2.5kg collar loaded on either side).
+  - Unit testing (so I can learn how unit testing works on Rust).
+  - ~~ Improve the help or usage message with examples. ~~
+  - ~~ Option to use different bars (the program asumes the 20kg bar for male competitions). ~~
+  - ~~ Add ASCII art drawings of the collars (now collars are loaded but not displayed in the drawing). ~~
 
-  ~ Improve the help or usage message with examples. ~
 
-  ~ Option to use different bars (the program asumes the 20kg bar for male competitions). ~
-
-  ~ Add ASCII art drawings of the collars (now collars are loaded but not displayed in the drawing). ~
-
-
-(Made with Rust because I wanted to learn)
+(Made with Rust because I wanted to learn.)
