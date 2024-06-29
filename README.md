@@ -1,4 +1,11 @@
-# Weightlifting calculator
+
+# ██╗  ██╗██╗██╗      ██████╗  ██████╗ ██████╗  █████╗ ███╗   ███╗
+# ██║ ██╔╝██║██║     ██╔═══██╗██╔════╝ ██╔══██╗██╔══██╗████╗ ████║
+# █████╔╝ ██║██║     ██║   ██║██║  ███╗██████╔╝███████║██╔████╔██║
+# ██╔═██╗ ██║██║     ██║   ██║██║   ██║██╔══██╗██╔══██║██║╚██╔╝██║
+# ██║  ██╗██║███████╗╚██████╔╝╚██████╔╝██║  ██║██║  ██║██║ ╚═╝ ██║
+# ╚═╝  ╚═╝╚═╝╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝
+                                                                
 
 If you're lazy or suck at doing math in your head. This is a tool for you.
 
@@ -7,7 +14,7 @@ Given a weight in kilograms it will show you how to properly load the plates on 
 Example: 
 
 ```
-./weighlifting-calculator 143 m
+./kilogram 143 m
       |¦||¦|                  |¦||¦|
     |||¦||¦|                  |¦||¦|||
    ||||¦||¦|                  |¦||¦||||
